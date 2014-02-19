@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+    <script type="text/javascript">
+        /*var myJSONObject = { "bindings": [
+        { "ircEvent": "PRIVMSG", "method": "newURI", "regex": "^http://.*" },
+        { "ircEvent": "PRIVMSG", "method": "deleteURI", "regex": "^delete.*" },
+        { "ircEvent": "PRIVMSG", "method": "randomURI", "regex": "^random.*" }
+    ]
+        };
+        var myJSONText = JSON.stringify(myJSONObject, replacer);*/
+        //creando el objeto
+        var objeto = { nombre: 'Franz', color: 'Azul' };
+        //JSON.stringify(objeto) => "{nombre:'Franz', color:'Azul'}"
+        objeto = JSON.stringify(objeto);
+        //guardando como string 
+        localStorage.setItem('miObjeto', objeto);
+
+        var resultado = localStorage.getItem('miObjeto');
+        console.log(resultado);
+    </script>
+</head>
+<body>
+    <input type="BUTTON" name="boton_guarda" value="Guardar en disco" onclick="javascript:document.execCommand('SaveAs','true','tu_archivo.txt')"/>
+</body>
+</html>
